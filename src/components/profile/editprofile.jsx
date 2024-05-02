@@ -41,7 +41,7 @@ const EditProfile = () => {
     }
   
     try {
-      const response = await fetch(`http://localhost:8080/user/profile/${id}/update`, {
+      const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/update`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updateUserData)

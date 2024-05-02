@@ -16,7 +16,7 @@ const OtherUserProfile = () => {
   useEffect(() => {
     const fetchOtherUserData = async () => {
       try {
-        const userDataResponse  = await fetch(`http://localhost:8080/user/profile/${id}`, {
+        const userDataResponse  = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
@@ -30,7 +30,7 @@ const OtherUserProfile = () => {
       }
 
       try {
-        const coursesResponse  = await fetch(`http://localhost:8080/users/profile/${id}/courses`, {
+        const coursesResponse  = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/users/profile/${id}/courses`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
@@ -45,7 +45,7 @@ const OtherUserProfile = () => {
       }
 
       try {
-        const challengesResponse  = await fetch(`http://localhost:8080/users/profile/${id}/challenges`, {
+        const challengesResponse  = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/users/profile/${id}/challenges`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });

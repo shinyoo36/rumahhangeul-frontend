@@ -26,7 +26,7 @@ const EditProfileBorder = () => {
         newProfile = userData.profileUsed;
         newBorder = selectedItem.valueItem;
       }
-      const response = await fetch(`http://localhost:8080/user/profile/${id}/profil`, {
+      const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/profil`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 

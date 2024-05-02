@@ -28,7 +28,7 @@ const Shop = () => {
   console.log("ID", id);
   const handleBuyItem = async () => {
     try {
-      await fetch(`http://localhost:8080/user/profile/${id}/update-score`, {
+      await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/update-score`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -37,7 +37,7 @@ const Shop = () => {
         })
       });
 
-      const response = await fetch(`http://localhost:8080/user/profile/${id}/item`, {
+      const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/item`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -68,7 +68,7 @@ const Shop = () => {
           newBorder = selectedItem.valueItem;
         }
 
-        const response = await fetch(`http://localhost:8080/user/profile/${id}/profil`, {
+        const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/profil`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ 

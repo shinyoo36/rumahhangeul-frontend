@@ -37,7 +37,7 @@ const Consonants = () => {
 
   const handleUpdateCourse = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/user/profile/${id}/update-score`, {
+        const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/update-score`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ 
@@ -53,7 +53,7 @@ const Consonants = () => {
       }
 
     try {
-      const response = await fetch(`http://localhost:8080/user/profile/${id}/course`, {
+      const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/course`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 

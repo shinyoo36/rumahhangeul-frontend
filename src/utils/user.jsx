@@ -15,7 +15,7 @@ export const fetchUserData = async () => {
     if(userData){
       const userId = userData.id;
       try {
-        const response = await fetch(`http://localhost:8080/user/profile/${userId}`, {
+        const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${userId}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
@@ -35,7 +35,7 @@ export const getUserCourse = async () => {
   if(userData){
   const userId = userData.id;
     try {
-      const response = await fetch(`http://localhost:8080/users/profile/${userId}/courses`, {
+      const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/users/profile/${userId}/courses`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -59,7 +59,7 @@ export const getUserCourseByCourseId = async (courseId) => {
   const userId = userData.id;
 
   try {
-    const response = await fetch(`http://localhost:8080/users/profile/${userId}/courses`, {
+    const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/users/profile/${userId}/courses`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
@@ -84,7 +84,7 @@ export const getUserItem = async () => {
   if(userData){
   const userId = userData.id;
     try {
-      const response = await fetch(`http://localhost:8080/users/profile/${userId}/items`, {
+      const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/users/profile/${userId}/items`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -108,7 +108,7 @@ export const getUserChallenge = async () => {
   if(userData){
   const userId = userData.id;
     try {
-      const response = await fetch(`http://localhost:8080/users/profile/${userId}/challenges`, {
+      const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/users/profile/${userId}/challenges`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });

@@ -26,7 +26,7 @@ const Leaderboard = () => {
   useEffect(() => {
     const getLeaderboard = async () => {
       try {
-        const response = await fetch("http://localhost:8080/users/leaderboard", {
+        const response = await fetch("https://rumahhangeul-backend-422018.et.r.appspot.com/users/leaderboard", {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });

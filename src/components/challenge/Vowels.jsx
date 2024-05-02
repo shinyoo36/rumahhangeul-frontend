@@ -43,7 +43,7 @@ const ChallengeVowels = () => {
     }
     
     try {
-      await fetch(`http://localhost:8080/user/profile/${id}/update-score`, {
+      await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/update-score`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -52,7 +52,7 @@ const ChallengeVowels = () => {
         })
       });
 
-      const response = await fetch(`http://localhost:8080/user/profile/${id}/challenge`, {
+      const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/challenge`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
