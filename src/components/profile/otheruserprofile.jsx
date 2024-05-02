@@ -110,9 +110,6 @@ const OtherUserProfile = () => {
           <p className="font-medium text-[20px] text-center">
             Skor : {userData.score} 
           </p>
-          <p className="font-medium text-[20px] text-center">
-            Sisa poin : {userData.point}
-          </p>
           <Button id='basicButtonBlue' className="hover:bg-gray-200" onClick={() => navigate("/peringkat")} startIcon={<NavigateBefore/>}>
             Kembali
           </Button>
