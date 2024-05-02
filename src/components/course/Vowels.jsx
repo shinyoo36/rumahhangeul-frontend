@@ -44,7 +44,6 @@ const Vowels = () => {
             "point": 100,
           })
         });
-        console.log(response);
         if(response.ok){
           setReward('yes');
         }
@@ -65,7 +64,6 @@ const Vowels = () => {
 
       if (response.ok) {
         const data = await response.text();
-        console.log("Response data", data);
         setNotificationMessage(data); //
         setNotificationType("success");
         setShowNotification(true);

@@ -25,7 +25,6 @@ const Shop = () => {
     id = userData.id;
     point = userData.point;
   }
-  console.log("ID", id);
   const handleBuyItem = async () => {
     try {
       await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/update-score`, {
@@ -50,7 +49,6 @@ const Shop = () => {
       if (response.ok) {
         const data = await response.text();
         setOpen2(true);
-        console.log(data);
       }
     } catch (error) {
       console.error("Error occurred during update course,", error);
@@ -79,7 +77,6 @@ const Shop = () => {
   
         if (response.ok) {
           const data = await response.text();
-          console.log(data);
           setOpen2(false);
           window.location.reload();
         }

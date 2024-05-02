@@ -64,7 +64,6 @@ const VowelsAdvanced = () => {
 
       if (response.ok) {
         const data = await response.text();
-        console.log("Response data", data);
         setNotificationMessage(data); //
         setNotificationType("success");
         setShowNotification(true);

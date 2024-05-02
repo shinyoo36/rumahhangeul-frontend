@@ -27,7 +27,6 @@ const Profile = () => {
 
   const perfectClearCount = challenges.filter(challenge => challenge.perfectClear === 'yes').length;
   const courseClearCount = courses.filter(course => course.completed === 'yes').length;
-  console.log(perfectClearCount);
   return (
     <Box className="min-h-[70vh] md:h-[90vh] py-[20px]  md:flex md:flex-row">
       <Box className="md:w-1/2 flex flex-col p-[25px] items-center justify-center">
