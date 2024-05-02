@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <Box className="min-h-[70vh]">
         <Box className="gap-y-[30px] flex flex-col items-center sm:justify-evenly xl:flex-row xl:h-[70vh]">
-          <Box className="text-center mt-[22px] xl:text-left xl:px-[20px] text-[24px] sm:text-[48px] md:text-[64px]">
+          <Box className="space-y-[10px] text-center mt-[22px] xl:text-left xl:px-[20px] text-[24px] sm:text-[48px] md:text-[64px]">
             <p className="textAnimation font-semibold">
               Belajar Bahasa Korea
             </p>

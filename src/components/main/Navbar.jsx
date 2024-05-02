@@ -112,10 +112,7 @@ const Navbar = () => {
               disableSwipeToOpen={true}
             >
               <Box className='flex flex-row w-full h-full'>
-                <Box className='md:hidden px-[10px] h-full flex items-center justify-center'>
-                  <Box className='bgBluePrimary w-[6px] h-1/2 items-center justify-center rounded-3xl'/>
-                </Box>
-                <Box className='space-y-[5px] py-[15px] pr-[24px] md:px-[30px] rounded-b-3xl'>
+                <Box className='space-y-[5px] py-[15px] px-[10px] md:px-[30px] rounded-b-3xl'>
                   <Box className='w-[220px] h-[250px] flex flex-col items-center justify-center'>
                     <Box className="boxProfile p-[5px]" style={{ '--color-props': userData.borderUsed, '--wAfter-prop': '125px', '--wBefore-prop': '135px' }}>
                       <img src={userData.profileUsed} className="rounded-full z-10 object-cover w-[120px] h-[120px]" />
