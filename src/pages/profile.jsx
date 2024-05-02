@@ -63,12 +63,12 @@ const Profile = () => {
           Achievement
         </p>
         <Box className="flex gap-x-[5px] px-[5px]">
-          {perfectClearCount == 1 && (
+          {perfectClearCount >= 1 && (
           <Tooltip title={onePerfectText} enterTouchDelay={0}>
             <img src={OnePerfect} className="z-10 object-fill w-[60px] h-[60px]"/>
           </Tooltip>
           )}
-          {perfectClearCount == 2 && (
+          {perfectClearCount >= 2 && (
           <Tooltip title={twoPerfectText} enterTouchDelay={0}>
             <img src={TwoPerfect} className="z-10 object-fill w-[60px] h-[60px]"/>
           </Tooltip>
