@@ -37,7 +37,7 @@ const ChallengeVowels2 = () => {
     let perfectClear;
     if(heartCount == 5){
       perfectClear = "yes"
-      updatedScore*2;
+      updatedScore * 2;
     } else{
       perfectClear = "no"
     }
@@ -59,7 +59,7 @@ const ChallengeVowels2 = () => {
           "namaChallenge": "Vokal 2",
           "firstClear": "yes",
           "perfectClear": perfectClear,
-          "gambarUrl": '../src/assets/challenge/vowels2.png',
+          "gambarUrl": '/challenge/vowels2.png',
         })
       });
 
@@ -208,7 +208,7 @@ const ChallengeVowels2 = () => {
         </DialogTitle>
         <DialogContent>
           <DialogContentText className="flex justify-center">
-            {heartCount === 0 ? "Maaf nyawa Anda sudah habis !" : "Anda telah menyelesaikan tantangan ini."}
+            {heartCount === 0 ? "Maaf nyawa Anda sudah habis !" : "Anda telah menyelesaikan kuis ini."}
           </DialogContentText>
         </DialogContent>
         {heartCount === 0 ? 

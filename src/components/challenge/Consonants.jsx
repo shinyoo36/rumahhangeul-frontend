@@ -38,7 +38,7 @@ const ChallengeConsonants = () => {
     let perfectClear;
     if(heartCount == 5){
       perfectClear = "yes"
-      updatedScore*2;
+      updatedScore * 2;
     } else{
       perfectClear = "no"
     }
@@ -60,7 +60,7 @@ const ChallengeConsonants = () => {
           "namaChallenge": "Konsonan",
           "firstClear": "yes",
           "perfectClear": perfectClear,
-          "gambarUrl": '../src/assets/challenge/consonants.png',
+          "gambarUrl": '/challenge/consonants.png',
         })
       });
 
@@ -209,7 +209,7 @@ const ChallengeConsonants = () => {
         </DialogTitle>
         <DialogContent>
           <DialogContentText className="flex justify-center">
-            {heartCount === 0 ? "Maaf nyawa Anda sudah habis !" : "Anda telah menyelesaikan tantangan ini."}
+            {heartCount === 0 ? "Maaf nyawa Anda sudah habis !" : "Anda telah menyelesaikan kuis ini."}
           </DialogContentText>
         </DialogContent>
         {heartCount === 0 ? 
