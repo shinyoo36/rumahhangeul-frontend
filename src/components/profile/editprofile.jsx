@@ -93,7 +93,7 @@ const EditProfile = () => {
             value={namaDepan}
             onChange={handleNamaDepanChange}
             error={namaDepanError}
-            helperText={namaDepanError ? "Nama Depan cannot be empty" : ""} 
+            helperText={namaDepanError ? "Nama Depan tidak boleh kosong" : ""} 
           > 
           </TextField>
         </Box>

@@ -113,7 +113,7 @@ const SignUp = () => {
               value={username}
               onChange={handleUsernameChange}
               error={usernameError}
-              helperText={usernameError ? "Username cannot be empty" : ""} 
+              helperText={usernameError ? "Username tidak boleh kosong" : ""} 
             > 
             </TextField>
           </Box>
@@ -126,7 +126,7 @@ const SignUp = () => {
               value={namaDepan}
               onChange={handleNamaDepanChange}
               error={namaDepanError}
-              helperText={namaDepanError ? "Nama Depan cannot be empty" : ""} 
+              helperText={namaDepanError ? "Nama Depan tidak boleh kosong" : ""} 
             > 
             </TextField>
           </Box>
@@ -172,7 +172,7 @@ const SignUp = () => {
               value={password}
               onChange={handlePasswordChange}
               error={passwordError}
-              helperText={passwordError && "Password must be at least 6 characters long and contain at least 1 number"}
+              helperText={passwordError && "Password minimal 6 karakter dan berisi 1 angka"}
             >
             </TextField>
           </Box>
