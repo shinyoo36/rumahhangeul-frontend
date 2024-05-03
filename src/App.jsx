@@ -62,11 +62,11 @@ import { CircularProgress } from '@mui/material';
       return (
         <Box className="h-screen flex flex-col items-center justify-center space-y-3">
           <CircularProgress />
-          <Box className=''>
+          {/* <Box className=''>
             <p className="textAnimationLoading font-semibold text-[#5e94c9]">
                 Loading...
             </p>
-          </Box>
+          </Box> */}
         </Box>
       );
     }
