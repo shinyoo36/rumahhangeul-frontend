@@ -8,7 +8,7 @@ import { userLocal, getUserItem, fetchUserData } from "../utils/user";
 
 const Hero = () => {
   fetchUserData();
-  const userData = userLocal;
+  const userData = userLocal();
   const navigate = useNavigate();
 
   return (
@@ -21,7 +21,7 @@ const Hero = () => {
             <p className="xl:w-[450px] font-semibold textHome2">
               Secara Gratis Sekarang Juga
             </p>
-            {userData.id == null? (
+            {userData == null? (
             <Button id="daftarSekarangButton" variant="contained" onClick={() => navigate("/signup")} endIcon={<NavigateNextIcon/>}>
               Daftar Sekarang
             </Button>
