@@ -21,7 +21,7 @@ const Hero = () => {
             <p className="xl:w-[450px] font-semibold textHome2">
               Secara Gratis Sekarang Juga
             </p>
-            {userData == null? (
+            {userData.id == null? (
             <Button id="daftarSekarangButton" variant="contained" onClick={() => navigate("/signup")} endIcon={<NavigateNextIcon/>}>
               Daftar Sekarang
             </Button>
