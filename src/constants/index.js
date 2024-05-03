@@ -387,8 +387,8 @@ export const shopBorderList = [
   {
     id: "27",
     tipeItem: "Profil Border",
-    namaItem: "Orchid",
-    valueItem: 'Orchid',
+    namaItem: "Sky Blue",
+    valueItem: 'SkyBlue',
     price : 100,
   },
   {

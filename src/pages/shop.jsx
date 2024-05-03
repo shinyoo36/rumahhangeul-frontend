@@ -132,7 +132,7 @@ const Shop = () => {
         </Box>
       </Box>
       {value == "Profile" ? (
-      <Box className="grid gridShop gap-y-[15px] gap-x-[30px]">
+      <Box className="bg-white z-50 grid gridShop gap-y-[15px] gap-x-[30px]">
         {shopProfileAnimalList
         .filter(item => !ownedItem.find(owned => owned.tipeItem === item.tipeItem && owned.namaItem === item.namaItem))
         .map(item => (
@@ -236,7 +236,7 @@ const Shop = () => {
       </Box>
       )
       : (
-      <Box className="grid gridShop gap-y-[15px] gap-x-[30px]">
+      <Box className="bg-white z-50 grid gridShop gap-y-[15px] gap-x-[30px]">
         {shopBorderList
         .filter(item => !ownedItem.find(owned => owned.tipeItem === item.tipeItem && owned.namaItem === item.namaItem))
         .map(item => (
