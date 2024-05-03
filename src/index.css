@@ -681,6 +681,21 @@ input:checked + label .description {
     cursor .4s step-end infinite alternate;
 }
 
+.textAnimationLoading {
+  display: inline-block;
+  letter-spacing: 10px;
+  font-size: 32px;
+  font-family: monospace;
+  border-right: 5px #5e94c9 solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    typing 2s steps(15),
+    cursor .4s step-end infinite alternate;
+}
+
+
 .textHome2{
   color: #5e94c9;
   font-size: 16px;

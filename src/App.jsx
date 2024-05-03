@@ -45,7 +45,7 @@ import { CircularProgress } from '@mui/material';
         });
 
         if (response.ok) {
-          // setLoading(false);
+          setLoading(false);
         } else {
           setTimeout(fetchData, 2000);
         }
@@ -60,10 +60,10 @@ import { CircularProgress } from '@mui/material';
 
     if (loading) {
       return (
-        <Box className="h-screen flex flex-col items-center justify-center">
+        <Box className="h-screen flex flex-col items-center justify-center space-y-3">
           <CircularProgress />
           <Box className=''>
-            <p className="textAnimation font-semibold text-[#5e94c9]">
+            <p className="textAnimationLoading font-semibold text-[#5e94c9]">
                 Loading...
             </p>
           </Box>
