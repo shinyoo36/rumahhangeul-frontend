@@ -143,7 +143,7 @@ const OtherUserProfile = () => {
       <Box className='w-full items-center flex flex-col'>
         <Box aria-label="Course" className='h-[50%] flex flex-col items-center'>
           <p className="pb-[20px] font-medium text-[20px] text-center">
-            Course yang diselesaikan
+            Pelajaran yang diselesaikan
           </p>
           {courses.length === 0 ? (
           <p className="textAnimation  font-semibold text-[#5e94c9]">

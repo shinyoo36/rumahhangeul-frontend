@@ -11,7 +11,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import TouchRipple from '@mui/material/ButtonBase/TouchRipple';
 
 import NotificationToast from "../../components/Notification.jsx";
-import { userLocal, getUserCourseByCourseId } from "../../utils/user";
+import { userLocal } from "../../utils/user";
 import { NavigateBefore } from "@mui/icons-material";
 import { consonants } from "../../constants/index.js";
 
@@ -36,22 +36,6 @@ const Consonants = () => {
 
 
   const handleUpdateCourse = async () => {
-      try {
-        const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/update-score`, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ 
-            "score": 1400,
-            "point": 140,
-          }) // Stringify the JSON object
-        });
-        if(response.ok){
-          setReward('yes');
-        }
-      } catch (error) {
-        console.error("Error occurred during update score", error);
-      }
-
     try {
       const response = await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/course`, {
         method: "POST",
@@ -65,6 +49,17 @@ const Consonants = () => {
 
       if (response.ok) {
         const data = await response.text();
+        if (data.includes("diselesaikan")) {
+          await fetch(`https://rumahhangeul-backend-422018.et.r.appspot.com/user/profile/${id}/update-score`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+              "score": 1400,
+              "point": 140,
+            })
+          });
+          setReward('yes');
+        }
         setNotificationMessage(data); //
         setNotificationType("success");
         setShowNotification(true);
