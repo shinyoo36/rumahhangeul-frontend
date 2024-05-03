@@ -33,6 +33,44 @@ import OtherUserProfile from './components/profile/otheruserprofile';
   function App() {
     fetchUserData();
     const userData = userLocal();
+
+    const [loading, setLoading] = useState(true);
+    const [connectionError, setConnectionError] = useState(false);
+  
+    useEffect(() => {
+      const testConnection = async () => {
+        try {
+          await axios.get('https://rumahhangeul-backend-422018.et.r.appspot.com/');
+          setLoading(false);
+        } catch (error) {
+          setConnectionError(true);
+          setLoading(false);
+        }
+      };
+  
+      testConnection();
+    }, []);
+
+    if (loading) {
+      return   <Box className="h-screen flex flex-col items-center justify-center">
+                <Box className=''>
+                  <p className="textAnimation font-semibold text-[#5e94c9]">
+                      Loading...
+                  </p>
+                </Box>
+              </Box>;
+    }
+  
+    if (connectionError) {
+      return   <Box className="h-screen flex flex-col items-center justify-center">
+                  <Box className=''>
+                    <p className="textAnimation font-semibold text-[#5e94c9]">
+                        Mohon tunggu sebentar...
+                    </p>
+                  </Box>
+                </Box>;
+    }
+
     return (
         <Box className="w-full h-screen">
           <Navbar/>
