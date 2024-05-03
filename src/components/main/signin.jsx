@@ -57,7 +57,7 @@ const SignIn = () => {
             setNotificationType("success");
             setShowNotification(true);
             setTimeout(() => {
-              window.location.href="/";
+              window.location.href="/materi";
               setShowNotification(false);
             }, 1500);
           } else{
@@ -107,7 +107,7 @@ const SignIn = () => {
               value={password}
               onChange={handlePasswordChange}
               error={passwordError}
-              helperText={passwordError && "Password must be at least 6 characters long and contain at least 1 number"}
+              helperText={passwordError && "Password minimal 6 karakter dan berisi 1 angka"}
             >
             </TextField>
           </Box>

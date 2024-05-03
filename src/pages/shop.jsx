@@ -118,10 +118,19 @@ const Shop = () => {
       <p className='text-center font-medium text-[26px]'>
         Daftar barang yang dijual
       </p>
-      <Tabs value={value} onChange={handleChange}>
-        <Tab id={value == 'Profile' ? 'tabsStyleActive' : ''} value="Profile" label="Profile" />
-        <Tab id={value == 'Border' ? 'tabsStyleActive' : ''} value="Border" label="Border" />
-      </Tabs>
+      <Box className='w-[100%] flex flex-col justify-center items-center gap-y-3'>
+        <Box className='tabsShop'>
+          <Tabs value={value} onChange={handleChange}>
+            <Tab id={value == 'Profile' ? 'tabsStyleActive' : ''} value="Profile" label="Profile" />
+            <Tab id={value == 'Border' ? 'tabsStyleActive' : ''} value="Border" label="Border" />
+          </Tabs>
+        </Box>
+        <Box className='flex w-[97%] items-center justify-center sm:justify-end'>
+          <p className="font-medium text-[20px] text-center">
+                Sisa poin : {userData.point}
+          </p>
+        </Box>
+      </Box>
       {value == "Profile" ? (
       <Box className="grid gridShop gap-y-[15px] gap-x-[30px]">
         {shopProfileAnimalList

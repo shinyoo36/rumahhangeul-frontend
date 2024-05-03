@@ -54,6 +54,25 @@
   right: calc(50% - 150px);
 }
 
+.tabsShop {
+  position: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .tabsShop {
+    position: fixed;
+    border-radius: 4px;
+    width: 300px;
+    height: 48px;
+    align-items: center;
+    right: calc(50% - 200px);
+  }
+  .tabsText{
+  }
+}
+
 @media (min-width: 1280px) {
   #alertStyles {
     width: 400px;

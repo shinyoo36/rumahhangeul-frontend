@@ -44,7 +44,7 @@ const Leaderboard = () => {
   }, []);
 
   return (
-    <Box className="min-h-[70vh] sm:flex sm:flex-row p-[15px]">
+    <Box className="min-h-[70vh] sm:flex sm:flex-row p-[15px] md:p-0">
       <Box className='[25px] sm:p-0 sm:w-1/3 flex flex-col items-center justify-around'>
         <Box className='rounded-3xl  flex flex-col items-center justify-center'>
           <Box className="boxProfile p-[5px] bg" style={{ '--color-props': borderUsed, '--wAfter-prop': '155px', '--wBefore-prop': '165px' }}>

@@ -8,8 +8,9 @@ import { userLocal, getUserItem, fetchUserData } from "../utils/user";
 
 const Hero = () => {
   fetchUserData();
-  
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const userData = userLocal;
+  const navigate = useNavigate();
+
   return (
     <Box className="min-h-[70vh]">
         <Box className="gap-y-[30px] flex flex-col items-center sm:justify-evenly xl:flex-row xl:h-[70vh]">
@@ -20,9 +21,16 @@ const Hero = () => {
             <p className="xl:w-[450px] font-semibold textHome2">
               Secara Gratis Sekarang Juga
             </p>
+            {userData == null? (
             <Button id="daftarSekarangButton" variant="contained" onClick={() => navigate("/signup")} endIcon={<NavigateNextIcon/>}>
               Daftar Sekarang
             </Button>
+            ) : (
+            <Button id="daftarSekarangButton" variant="contained" onClick={() => navigate("/materi")} endIcon={<NavigateNextIcon/>}>
+              Mulai Belajar
+            </Button>
+            )}
+   
           </Box>
           <Box className="w-[80%] ss:w-[70%] sm:w-auto">
             <img src={landing1}/>
