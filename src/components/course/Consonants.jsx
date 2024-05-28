@@ -188,14 +188,15 @@ const Consonants = () => {
         </Box>
         
       </Box>
-      <Box className='flex gap-x-[40px]'>
-        <Button id='basicButtonBlue' className="hover:bg-gray-200" onClick={() => navigate("/materi")} startIcon={<NavigateBefore/>}>
-          Batal
-        </Button>
+      <Box className='flex gap-x-[40px] pb-[20px]'>
+   
         <Button id={progress === 13 ? 'basicButtonGreen' : 'basicButtonBlue'} className="hover:bg-gray-200" onClick={handleNextClick} endIcon={<NavigateNextIcon/>}>
           {progress === 13 ? "Selesaikan" : "Berikutnya"}
         </Button>
       </Box>
+      <Button id='basicButtonBlue' className="hover:bg-gray-200" onClick={() => navigate("/materi")} startIcon={<NavigateBefore/>}>
+          Kembali ke halaman materi
+      </Button>
       <Dialog
         open={open}
         onClose={handleClose}

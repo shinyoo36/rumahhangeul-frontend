@@ -116,15 +116,13 @@ const SignIn = () => {
               Masuk
             </Button>
           </Box>
-          <Box className="buttonContainer flex-col mb-[20px]">
-            <p className="text-2xl text-center font-semibold mb-[10px]">
-              Belum punya Akun ?
+          <Box className="buttonContainer mb-[20px] gap-x-2">
+            <p className="text-2xl text-center font-semibold">
+              Belum punya Akun ? 
             </p>
-            <Box className="buttonContainer mt-[5px]">
-              <Button id="basicButtonBlue" onClick={() => navigate("/signup")}>
-                Daftar
-              </Button>
-            </Box>
+            <p className="text-[#94A2FB] font-bold cursor-pointer text-2xl text-center" onClick={() => navigate("/signup")}>
+              Daftar
+            </p>
           </Box>
         </Box>
         {showNotification && (

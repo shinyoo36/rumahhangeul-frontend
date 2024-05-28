@@ -55,7 +55,7 @@ const Profile = () => {
             Sisa poin : {userData.point}
           </p>
           <Button id="basicButtonBlue" variant="contained" onClick={() => navigate("/profile/edit-profile")} startIcon={<EditIcon/>}>
-            Ubah Profile
+            Ubah Data Pengguna
           </Button>
         </Box>
         <p className="font-medium text-[24px] text-center pb-[15px]">

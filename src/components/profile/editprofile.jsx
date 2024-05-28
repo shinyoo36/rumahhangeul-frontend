@@ -78,8 +78,8 @@ const EditProfile = () => {
         <Box className="boxProfile p-[5px]" style={{ '--color-props': userData.borderUsed, '--wAfter-prop': '185px', '--wBefore-prop': '195px' }}>
           <img src={userData.profileUsed} className="rounded-full z-10 object-cover w-[180px] h-[180px]" />
         </Box>
-        <Button id="basicButtonBlue" variant="contained" onClick={() => navigate("/profile/edit-profile-border")} startIcon={<EditIcon/>}>
-          Ubah Border
+        <Button id="basicButtonBlue" variant="contained" onClick={() => navigate("/profile/edit-profile-foto")} startIcon={<EditIcon/>}>
+          Ubah Profil
         </Button>
         <p className="font-semibold text-[32px] text-center">
           {namaDepan}

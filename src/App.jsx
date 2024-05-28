@@ -102,7 +102,7 @@ import { CircularProgress } from '@mui/material';
 
                 <Route path="/profile" element={userData == null ? <OopsPage/> : <Profile />} />
                   <Route path="/profile/edit-profile" element={userData == null ? <OopsPage/> : <EditProfile />} />
-                  <Route path="/profile/edit-profile-border" element={userData == null ? <OopsPage/> : <EditProfileBorder />} />
+                  <Route path="/profile/edit-profile-foto" element={userData == null ? <OopsPage/> : <EditProfileBorder />} />
                   <Route path="/profile/other-user/:id" element={userData == null ? <OopsPage/> : <OtherUserProfile />} />
           
               </Routes>
