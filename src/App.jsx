@@ -19,7 +19,7 @@ import OopsPage from './components/main/OopsPage';
 import EditProfile from './components/profile/editprofile';
 import EditProfileBorder from './components/profile/editprofileborder';
 
-import Hero from "./pages/home";
+import Landing from "./pages/landing";
 import Dashboard from "./pages/dashboard";
 import Leaderboard from "./pages/leaderboard";
 import Profile from "./pages/profile";
@@ -35,42 +35,6 @@ import { CircularProgress } from '@mui/material';
     fetchUserData();
     const userData = userLocal();
 
-    const [loading, setLoading] = useState(true);
-
-    const fetchData = async () => {
-      try {
-        const response = await fetch("https://rumahhangeul-backend-422018.et.r.appspot.com/users/leaderboard", {
-          method: "GET",
-          headers: { "Content-Type": "application/json" },
-        });
-
-        if (response.ok) {
-          setLoading(false);
-        } else {
-          setTimeout(fetchData, 2000);
-        }
-      } catch (error) {
-        setTimeout(fetchData, 2000);
-      }
-    };
-
-    useEffect(() => {
-      fetchData();
-    }, []);
-
-    if (loading) {
-      return (
-        <Box className="h-screen flex flex-col items-center justify-center space-y-3">
-          <CircularProgress />
-          {/* <Box className=''>
-            <p className="textAnimationLoading font-semibold text-[#5e94c9]">
-                Loading...
-            </p>
-          </Box> */}
-        </Box>
-      );
-    }
-
     // if (connectionError) {
     //   return   <Box className="h-screen flex flex-col items-center justify-center">
     //               <Box className=''>
@@ -81,10 +45,9 @@ import { CircularProgress } from '@mui/material';
 
     return (
         <Box className="w-full h-screen">
-          <Navbar/>
             <Box className='min-h-[70vh]'>
               <Routes>
-                <Route path="/" element={<Hero />} />
+                <Route path="/" element={<Landing />} />
                   <Route path="/signin" element={<SignIn />} />
                   <Route path="/signup" element={<SignUp />} />
                 
@@ -107,7 +70,6 @@ import { CircularProgress } from '@mui/material';
           
               </Routes>
             </Box>
-          <Footer/>
         </Box>
     )
   }
