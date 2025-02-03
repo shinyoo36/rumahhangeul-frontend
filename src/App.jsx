@@ -19,7 +19,7 @@ import OopsPage from './components/main/OopsPage';
 import EditProfile from './components/profile/editprofile';
 import EditProfileBorder from './components/profile/editprofileborder';
 
-import Hero from "./pages/landing";
+import Hero from "./pages/home";
 import Dashboard from "./pages/dashboard";
 import Leaderboard from "./pages/leaderboard";
 import Profile from "./pages/profile";
