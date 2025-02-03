@@ -19,7 +19,7 @@ import OopsPage from './components/main/OopsPage';
 import EditProfile from './components/profile/editprofile';
 import EditProfileBorder from './components/profile/editprofileborder';
 
-import Hero from "./pages/home";
+import Landing from "./pages/landing";
 import Dashboard from "./pages/dashboard";
 import Leaderboard from "./pages/leaderboard";
 import Profile from "./pages/profile";
@@ -47,7 +47,7 @@ import { CircularProgress } from '@mui/material';
         <Box className="w-full h-screen">
             <Box className='min-h-[70vh]'>
               <Routes>
-                <Route path="/" element={<Hero />} />
+                <Route path="/" element={<Landing />} />
                   <Route path="/signin" element={<SignIn />} />
                   <Route path="/signup" element={<SignUp />} />
                 
