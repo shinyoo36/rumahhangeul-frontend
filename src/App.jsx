@@ -45,6 +45,7 @@ import { CircularProgress } from '@mui/material';
 
     return (
         <Box className="w-full h-screen">
+          <Navbar/>
             <Box className='min-h-[70vh]'>
               <Routes>
                 <Route path="/" element={<Hero />} />
@@ -70,6 +71,7 @@ import { CircularProgress } from '@mui/material';
           
               </Routes>
             </Box>
+          <Footer/>
         </Box>
     )
   }
